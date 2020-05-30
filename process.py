@@ -21,10 +21,10 @@ def processor(file):
 
 		 resDict[imageName] = res
 
-		 sequencer.sequence(resDict)
+	char = sequencer.sequence(resDict)
 
 
-
+	return char
 		 # file = open("text.txt","a")
 		 # file.write(res)
 		 # file.close()

@@ -12,7 +12,7 @@ import predictor
 
 HEIGHT = 500
 WIDTH = 1000
-final_text = "jibber jabber"
+flag = False
 
 data =str()
 root = tk.Tk(className=' KANNADA TEXT ANALYSER')
@@ -43,20 +43,37 @@ button1 = tk.Button(frame, text="Upload", font=40, command= filedialogFunc)
 button1.place(relx=0.38, relheight=1, relwidth=0.2)
 
 def getData():
-    process.processor(filename)
-    
+    global final_text
+    final_text = process.processor(filename)
+    flag = True
+    printt()
+    setStatus()
+    button3['state'] = tk.ACTIVE
     
 
 button2 = tk.Button(frame, text="Get data", font=40, command=getData)
 button2.place(relx=0.59, relheight=1, relwidth=0.2)
 button2['state'] = tk.DISABLED
 
-def analyseFunc():
-    print("done")
-    print(filename)
-    printt()
-    
-button3 = tk.Button(frame, text="See segmentation", font=40, command=analyseFunc)
+# def analyseFunc():
+#     print("done")
+#     print(filename)
+#     printt()
+
+def saveFunc():
+    f = filedialog.asksaveasfile(mode="wb", defaultextension=".txt")
+    if f is None:
+        return
+    result = final_text.encode("utf-8")
+
+    # res = result.decode('utf-8')
+
+    f.write(result)
+    # f.close()
+    setStatus()
+
+
+button3 = tk.Button(frame, text="Save as text file", font=40, command=saveFunc)
 button3.place(relx=0.80, relheight=1, relwidth=0.2)
 button3['state'] = tk.DISABLED
 
@@ -64,17 +81,17 @@ def setStatus():
     print(filename)
     if(not filename):
         button2['state'] = tk.DISABLED
-        button3['state'] = tk.DISABLED
-        button4['state'] = tk.DISABLED
-    else:
-        button2['state'] = tk.ACTIVE
-        button3['state'] = tk.ACTIVE
-        button4['state'] = tk.ACTIVE
         
-    if(not final_text):
-        button4['state'] = tk.DISABLED
+       
     else:
         button2['state'] = tk.ACTIVE
+      
+        
+        
+    # if(not flag):
+    #     button3['state'] = tk.DISABLED
+    # else:
+    #     button3['state'] = tk.ACTIVE
                              
 
 
@@ -82,31 +99,26 @@ lower_frame = tk.Frame(root, bg='#339cff', bd=5)
 lower_frame.place(relx=0.5, rely=0.25, relwidth=0.85, relheight=0.7, anchor='n')
 
 
-def saveFunc():
-    f = filedialog.asksaveasfile(mode="w", defaultextension=".txt")
-    if f is None:
-        return
-    f.write(final_text)
-    setStatus()
+# def saveFunc():
+#     f = filedialog.asksaveasfile(mode="w", defaultextension=".txt")
+#     if f is None:
+#         return
+#     f.write(final_text)
+#     setStatus()
     
-button4 = tk.Button(lower_frame, text="Save text", font=40, command = saveFunc)
-button4.place(relx=0.85 ,rely=0.9, relheight=0.1, relwidth=0.15)
-button4['state'] = tk.DISABLED
-
-def play(e):
-	
-	cmdIn = "tesseract "+str(e)+" output -l kan --oem 1 --psm 3"
-	print(cmdIn)
-	os.popen(cmdIn)
-
-
+# button4 = tk.Button(lower_frame, text="Save text", font=40, command = saveFunc)
+# button4.place(relx=0.85 ,rely=0.9, relheight=0.1, relwidth=0.15)
+# button4['state'] = tk.DISABLED
 	
 def printt():
 	# data=str()
 	# f=open("C:\\Users\\bhatk\\output.txt", encoding = "utf8")
 	# data = b'\xe0\xb2\x87'
 	# f.close()
-    result , i = predictor.predict("./seg_img/img1_1_1.jpeg")
+    # result , i = predictor.predict("./seg_img/img1_1_1.jpeg")
+
+    # res = result.decode('utf-8')
+    result = final_text.encode("utf-8")
 
     res = result.decode('utf-8')
 

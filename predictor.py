@@ -24,16 +24,18 @@ def predict(img):
 
 	result = str(class_names[a])
 	res = result.encode("utf-8")
-	
+
 	basefilename = os.path.basename(image)
 	imageName = os.path.splitext(basefilename)[0]
 
 
-	return res, imageName
+	return result , imageName
 
 # res,i = predict("./seg_img/img1_1_1.jpeg")
 # #print(res.decode('utf-8'))
 # file = open("text.txt","wb")
-# file.write(res)
+# result = res.encode("utf-8")
+# print(result.type())
+# file.write(result)
 # file.close()
 # print(i)
