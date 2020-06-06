@@ -7,7 +7,7 @@ np.set_printoptions(threshold=2**31-1)
 
 #------------------Functions------------------#
 
-def showimages():
+def showimages(src_img, bin_img, final_thr):
 	cv2.namedWindow('Source Image', cv2.WINDOW_AUTOSIZE)
 	cv2.namedWindow('Threshold Image', cv2.WINDOW_AUTOSIZE)
 	cv2.namedWindow('Binary Image', cv2.WINDOW_AUTOSIZE)
@@ -18,7 +18,7 @@ def showimages():
 
 
 
-def closewindows():
+def closewindows(src_img, bin_img, final_thr):
 	k = cv2.waitKey(0)
 	if k & 0xFF == ord('s'):
 		comment = input("Comment:-\n ")
@@ -37,6 +37,7 @@ def line_array(array):
 	for y in range(5, len(array)-5):
 		s_a, s_p = strtline(y, array)
 		e_a, e_p = endline(y, array)
+
 		if s_a>=7 and s_p>=5:
 			list_x_upper.append(y)
 			# bin_img[y][:] = 255
@@ -106,6 +107,7 @@ def refine_array(array_upper, array_lower):
 	for y in range(len(array_lower)-1):
 		if array_lower[y] + 5 < array_lower[y+1]:
 			lowerlines.append(array_lower[y]+10)
+	
 
 	upperlines.append(array_upper[-1]-10)
 	lowerlines.append(array_lower[-1]+10)
@@ -201,7 +203,9 @@ def segment(ipimg):
             for x in range(width):
                 if bin_img[y][x] == 255 :
                     count_x[y] = count_x[y]+1
+
         upper_lines, lower_lines = line_array(count_x)
+        
         upperlines, lowerlines = refine_array(upper_lines, lower_lines)
         if len(upperlines)==len(lowerlines):
             lines = []
@@ -212,7 +216,7 @@ def segment(ipimg):
             for y in range(len(upperlines)):
                 lines.append((upperlines[y], lowerlines[y]))
         else:
-            showimages()
+            showimages(src_img, bin_img, final_thr)
             k = cv2.waitKey(0)
             while 1:
                 k = cv2.waitKey(0)
@@ -245,4 +249,4 @@ def segment(ipimg):
         print("done")
         return
             
-# segment("C:\\Users\\bhatk\\OneDrive\\Desktop\\three.jpg")
+#segment("C:\\Users\\bhatk\\OneDrive\\Desktop\\8.jpeg")
