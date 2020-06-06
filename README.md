@@ -4,11 +4,12 @@
 ```
 1. Clone this repository
 2. Open CMD in cloned directory
-3. Run the program kangui.py
-    ```
-      python kangui.py
-       ```
-       ````
+3. Run the program by typing 
+```
+python kangui.py
+```
+```
+
 
 ### Contributors
 
