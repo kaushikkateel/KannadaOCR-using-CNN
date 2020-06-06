@@ -1,4 +1,6 @@
 # KannadaOCR-using-CNN
+This project uses CNN to convert handwritten kannada characters to machine encoded text and save it as a text file.
+The interface is designed using Tkinter 
 
 # Requirements
 ```
