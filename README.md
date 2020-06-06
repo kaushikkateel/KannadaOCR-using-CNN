@@ -13,7 +13,6 @@ Scipy
 Matplotlib
 Keras
 Pillow
-Tkinter
 ```
 # Installation
 
