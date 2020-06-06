@@ -1,13 +1,15 @@
 # KannadaOCR-using-CNN
-
-# Usage
+# requirements
 ```
 1. Clone this repository
 2. Open CMD in cloned directory
-3. Run the program by typing 
+3. Run requirements.txt by typing 
+   `pip install -r requirements.txt`
 ```
-python kangui.py
+# Usage
 ```
+1. Open CMD in cloned directory
+2. Run the program by typing python kangui.py
 ```
 
 
