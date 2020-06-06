@@ -1,5 +1,21 @@
 # KannadaOCR-using-CNN
-# requirements
+
+# Requirements
+```
+Python 3.x
+scikit image
+numpy
+OpenCV
+Django
+Tensorflow
+Joblib
+Scipy
+Matplotlib
+Keras
+Pillow
+Tkinter
+```
+# Installation
 
 1. Clone this repository
 2. Open CMD in cloned directory
@@ -13,7 +29,6 @@
 2. Run the program by typing
 
    `python kangui.py`
-
 
 
 ### Contributors
