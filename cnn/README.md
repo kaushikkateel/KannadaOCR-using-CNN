@@ -1,4 +1,3 @@
-# KannadaOCR
 
 **To use the pre-trained model**
 1. Download the **final_proj_try2.h5** file.
