@@ -5,7 +5,6 @@ The interface is designed using Tkinter
 # Requirements
 ```
 Python 3.x
-
 numpy
 OpenCV
 Tensorflow
