@@ -1,1 +1,9 @@
-
+scikit-imag
+numpy
+scipy
+matplotlib
+Keras
+Pillow
+scikit-learn
+tensorflow
+opencv-python
