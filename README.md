@@ -5,13 +5,14 @@ The interface is designed using Tkinter
 # Requirements
 ```
 Python 3.x
-scikit image
+
 numpy
 OpenCV
 Tensorflow
 Scipy
-Matplotlib
 Keras
+Matplotlib
+scikit image
 Pillow
 ```
 # Installation
