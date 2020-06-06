@@ -8,9 +8,7 @@ Python 3.x
 scikit image
 numpy
 OpenCV
-Django
 Tensorflow
-Joblib
 Scipy
 Matplotlib
 Keras
