@@ -36,5 +36,5 @@ Pillow
   <a href="https://github.com/kaushikkateel"><img src="https://github.com/indent-org/InDent-Koders/blob/master/49521970.png" width="75" height="75" /></a>
   <a href="https://github.com/gavindsz"><img src="https://github.com/indent-org/InDent-Koders/blob/master/124455567.jpg" width="75" height="75" /></a>
   <a href="https://github.com/SiddanthNayak"><img src="https://github.com/indent-org/InDent-Koders/blob/master/50180339.jfif" width="75" height="75" /></a>
-  <a href="https://github.com/dushyanthprabhu"><img src="https://github.com/indent-org/InDent-Koders/blob/master/12345543.jpg" width="75" height="75" /></a>
+  <a href="https://github.com/dushyanthprabhu"><img src="https://github.com/indent-org/InDent-Koders/blob/master/IMG_9071.JPG~2.jpg" width="75" height="75" /></a>
 </p>
