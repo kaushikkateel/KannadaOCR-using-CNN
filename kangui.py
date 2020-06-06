@@ -1,6 +1,6 @@
 
 #  Created by InDent (Kaushik Kateel, Gavin D'Souza, Dushyanth Prabhu B and H Siddanth Nayak) .
-#  Copyright © 2019 InDent. All rights reserved.
+#  Copyright © 2020 InDent. All rights reserved.
 
 import os
 import tkinter as tk
