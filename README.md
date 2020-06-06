@@ -1,5 +1,15 @@
 # KannadaOCR-using-CNN
 
+# Usage
+```
+1. Clone this repository
+2. Open CMD in cloned directory
+3. Run the program kangui.py
+    ```
+      python kangui.py
+       ```
+       ````
+
 ### Contributors
 
 <p float="left">
