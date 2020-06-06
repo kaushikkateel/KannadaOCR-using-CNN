@@ -1,9 +1,9 @@
-scikit-imag
 numpy
 scipy
 matplotlib
-Keras
 Pillow
 scikit-learn
-tensorflow
+scikit-imag
 opencv-python
+Keras
+tensorflow
