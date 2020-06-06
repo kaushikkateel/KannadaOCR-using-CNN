@@ -1,6 +1,6 @@
 
-#  Created by Kaushik Kateel on 4/05/19.
-#  Copyright © 2019 Kaushik Kateel. All rights reserved.
+#  Created by InDent (Kaushik Kateel, Gavin D'Souza, Dushyanth Prabhu B and H Siddanth Nayak) .
+#  Copyright © 2019 InDent. All rights reserved.
 
 import os
 import tkinter as tk
