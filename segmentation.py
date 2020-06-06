@@ -246,7 +246,7 @@ def segment(ipimg):
             x_lines[i].append(width)
         for i in range(len(lines)):
             letter_seg(lines_img, x_lines, i)
-        print("done")
+        print("Segmentation is done")
         return
             
 #segment("C:\\Users\\bhatk\\OneDrive\\Desktop\\8.jpeg")
