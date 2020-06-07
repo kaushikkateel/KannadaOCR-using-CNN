@@ -18,7 +18,7 @@ Pillow
 
 1. Clone this repository
 2. Open CMD in cloned directory
-3. Run requirements.txt by typing 
+3. Install the required modules by typing 
 
    `pip install -r requirements.txt`
 
